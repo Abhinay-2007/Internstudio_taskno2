@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiCalc - Multipurpose Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h2>MultiCalc</h2>
+                <button class="close-btn" id="closeSidebar">&times;</button>
+            </div>
+            <div class="search-box">
+                <input type="text" id="calcSearch" placeholder="Search calculators...">
+            </div>
+            <nav class="sidebar-nav">
+                <ul id="calcList">
+                    <!-- Nav items populated by JS -->
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <button class="menu-btn" id="openSidebar">&#9776;</button>
+                <div class="header-right">
+                    <button class="theme-toggle" id="themeToggle">🌙 Dark Mode</button>
+                </div>
+            </header>
+
+            <div class="workspace">
+                <div id="welcomeScreen" class="calc-view active">
+                    <h1>Welcome to MultiCalc</h1>
+                    <p>Select a calculator from the menu to get started.</p>
+                    
+                    <div class="dashboard-grid">
+                        <div class="dashboard-card">
+                            <h3>Favorites</h3>
+                            <ul id="favoritesList" class="quick-list"></ul>
+                        </div>
+                        <div class="dashboard-card">
+                            <h3>Recent</h3>
+                            <ul id="recentList" class="quick-list"></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calculator Container -->
+                <div id="calculatorContainer">
+                    <!-- Views will be injected or toggled here -->
+                </div>
+                
+                <div class="history-panel" id="historyPanel">
+                    <div class="history-header">
+                        <h3>History</h3>
+                        <button id="clearHistoryBtn" class="action-btn">Clear</button>
+                    </div>
+                    <ul id="historyList"></ul>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
